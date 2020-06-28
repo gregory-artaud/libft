@@ -6,13 +6,13 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 20:23:19 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 20:32:32 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 22:04:54 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	unsigned int cpt;
 
@@ -21,5 +21,5 @@ size_t	strlen(const char *s)
 	{
 		cpt++;
 	}
-	return cpt;
+	return (cpt);
 }
