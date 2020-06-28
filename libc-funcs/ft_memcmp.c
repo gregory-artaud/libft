@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 19:56:33 by gregory          ###   ########.fr       */
+/*   Created: 2020/06/28 19:57:24 by gregory           #+#    #+#             */
+/*   Updated: 2020/06/28 20:05:50 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+int		memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned int cpt;
+	unsigned char *s1c;
+	unsigned char *s2c;
 
-void *ft_memset(void *s, int c, size_t n);
-
-void *ft_memcpy(void *dest, const void *src, size_t n);
-void *ft_memccpy(void *dest, const void *src, int c, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t n);
-
-int memcmp(const void *s1, const void *s2, size_t n);
-
-#endif
+	s1c = (unsigned char*)s1;
+	s2c = (unsigned char*)s2;
+	cpt = 0;
+	while (cpt < n)
+	{
+		if (s1c[cpt] == s2c[cpt])
+		{
+			cpt++;
+		}
+		else
+		{
+			return (s1c[cpt] - s2c[cpt]);
+		}
+	}
+	return (0);
+}
