@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 13:58:12 by gregory          ###   ########.fr       */
+/*   Created: 2020/06/28 13:56:12 by gregory           #+#    #+#             */
+/*   Updated: 2020/06/28 13:58:17 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-
-void *ft_memset(void *s, int c, size_t n);
-
-#endif
+void	*ft_memset(void *s, int c, size_t n)
+{
+	return ;
+}
