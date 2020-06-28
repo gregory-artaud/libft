@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 22:58:43 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 23:03:26 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
 
 #endif
