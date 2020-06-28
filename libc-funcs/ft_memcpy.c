@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 18:52:30 by gregory          ###   ########.fr       */
+/*   Created: 2020/06/28 15:51:56 by gregory           #+#    #+#             */
+/*   Updated: 2020/06/28 15:55:53 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned int cpt;
 
-void *ft_memset(void *s, int c, size_t n);
-void bzero(void *s, size_t n);
-void *ft_memcpy(void *dest, const void *src, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t n);
-
-#endif
+	cpt = 0;
+	while (cpt < n)
+	{
+		*((char*)dest + cpt) = *((char*)src + cpt);
+		cpt++;
+	}
+	return (dest);
+}

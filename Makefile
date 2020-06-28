@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 16:04:17 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 18:54:20 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,10 @@ NAME	= libft.a
 CFLAGS	= -Wall -Werror -Wextra -c
 LDFLAGS	= -shared -fPIC -g
 CC		= gcc
-FILES	= ft_bzero.c
+FILES	= ft_memset.c \
+						ft_memmove.c \
+						ft_memcpy.c \
+						ft_bzero.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
@@ -29,8 +32,8 @@ $(OBJ): $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
 
 clean:
-	rm -f $(OBJ)
-	rm -f $(FILES)
+	rm -f *.o
+	rm -f *.c
 
 fclean: clean
 	rm -f $(NAME)
