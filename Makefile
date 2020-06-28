@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 19:13:34 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 19:50:01 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ CC		= gcc
 FILES	= ft_memset.c \
 						ft_memmove.c \
 						ft_memcpy.c \
-						ft_memccpy.c
+						ft_memccpy.c \
+						ft_memchr.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
