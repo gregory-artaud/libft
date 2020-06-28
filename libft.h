@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 22:22:59 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 22:29:11 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ int ft_memcmp(const void *s1, const void *s2, size_t n);
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
+int ft_isascii(int c);
 
 #endif
