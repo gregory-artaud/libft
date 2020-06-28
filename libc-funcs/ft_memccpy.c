@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 19:03:50 by gregory          ###   ########.fr       */
+/*   Created: 2020/06/28 19:04:02 by gregory           #+#    #+#             */
+/*   Updated: 2020/06/28 19:39:45 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+{
+	unsigned int cpt;
 
-void *ft_memset(void *s, int c, size_t n);
-
-void *ft_memcpy(void *dest, const void *src, size_t n);
-void *ft_memccpy(void *dest, const void *src, int c, size_t n);
-void *ft_memmove(void *dest, const void *src, size_t n);
-
-#endif
+	cpt = 0;
+	while (cpt < n)
+	{
+		if (*((char*)src + cpt) != (char)c)
+		{
+			*((char*)dest + cpt) = *((char*)src + cpt);
+			cpt++;
+		}
+		else
+		{
+			*((char*)dest + cpt) = *((char*)src + cpt);
+			cpt++;
+			return (dest + cpt);
+		}
+	}
+	return (NULL);
+}
