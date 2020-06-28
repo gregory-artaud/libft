@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 16:10:16 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 16:15:50 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 18:39:55 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,19 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int cpt;
+	int 	cpt;
+	char 	tmp[n];
 
 	cpt = 0;
 	while (cpt < n)
 	{
-		*((char*)dest + cpt) = *((char*)src + cpt);
+		tmp[cpt] = *((char*)src + cpt);
+		cpt++;
+	}
+	cpt = 0;
+	while (cpt < n)
+	{
+		*((char*)dest + cpt) = tmp[cpt];
 		cpt++;
 	}
 	return (dest);
