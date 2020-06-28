@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 20:48:32 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 22:08:50 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void *ft_memmove(void *dest, const void *src, size_t n);
 
 
 
-int isalpha(int c);
+int ft_isalpha(int c);
 
 #endif
