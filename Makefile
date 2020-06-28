@@ -6,25 +6,30 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 14:03:47 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 14:41:03 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ANAME	= libft.a
 SONAME	= libft.so
-CFLAGS	= -Wall -Werror -Wextra -I. -c
+CFLAGS	= -Wall -Werror -Wextra -c
 LDFLAGS	= -shared -fPIC -g
 CC		= gcc
 FILES	= ft_memset.c
 OBJ 	= $(FILES:%.c=%.o)
 
-all: copy $(SONAME)
+all: $(ANAME) $(SONAME)
+
+so: $(SONAME)
 
 copy:
 	cp -f libc-funcs/*.c .
 
-$(SONAME): $(OBJ)
-	$(CC) $(LDFLAGS) $(CFLAGS) -o $(SONAME) $(OBJ)
+$(SONAME): SO/$(OBJ)
+	$(CC) -shared -o $@ $(OBJ)
+
+SO/$(OBJ): $(FILES)
+	$(CC) -fPIC $(CFLAGS) $(FILES)
 
 $(ANAME): $(OBJ)
 	ar rcs $(ANAME) $(OBJ)
@@ -38,6 +43,7 @@ clean:
 
 fclean: clean
 	rm -f $(ANAME)
+	rm -f $(SONAME)
 
 re: fclean all
 
