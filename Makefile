@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 21:55:20 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 22:15:03 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,10 @@ FILES	= ft_memset.c \
 						ft_memccpy.c \
 						ft_memcmp.c \
 						ft_memchr.c \
-            ft_bzero.c \
-            ft_strlen.c \
-            ft_isalpha.c
+						ft_bzero.c \
+						ft_strlen.c \
+						ft_isalpha.c \
+						ft_isdigit.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
