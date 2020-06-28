@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 16:18:33 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 18:42:10 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 CFLAGS	= -Wall -Werror -Wextra -c
 LDFLAGS	= -shared -fPIC -g
 CC		= gcc
-FILES	= ft_memmove.c
+FILES	= ft_memset.c ft_memmove.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
