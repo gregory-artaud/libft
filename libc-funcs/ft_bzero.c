@@ -6,13 +6,13 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 15:18:15 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/28 15:22:08 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/28 21:59:29 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int cpt;
 
