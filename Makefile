@@ -21,7 +21,8 @@ FILES	= ft_memset.c \
 						ft_memcmp.c \
 						ft_memchr.c \
             ft_bzero.c \
-            ft_strlen.c
+            ft_strlen.c \
+            ft_isalpha.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
