@@ -6,11 +6,12 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/28 14:41:03 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/28 15:08:33 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ANAME	= libft.a
+NAME	= $(ANAME)
 SONAME	= libft.so
 CFLAGS	= -Wall -Werror -Wextra -c
 LDFLAGS	= -shared -fPIC -g
@@ -18,9 +19,11 @@ CC		= gcc
 FILES	= ft_memset.c
 OBJ 	= $(FILES:%.c=%.o)
 
-all: $(ANAME) $(SONAME)
+all: copy $(NAME)
 
 so: $(SONAME)
+
+$(NAME): $(ANAME)
 
 copy:
 	cp -f libc-funcs/*.c .
