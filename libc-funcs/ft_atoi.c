@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:59:55 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/29 12:11:36 by gregory          ###   ########.fr       */
+/*   Updated: 2020/06/30 13:50:46 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,35 +14,25 @@
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int number_len;
-	int res;
-	int tmp;
+	unsigned int	i;
+	int				sgn;
+	int				res;
 
 	i = 0;
-	while (ft_isdigit(nptr[i]))
+	sgn = 1;
+	res = 0;
+	while ((!ft_isdigit(nptr[i])) && (nptr[i] != '+') && (nptr[i] != '-'))
+		i++;
+	if ((nptr[i] == '-') || (nptr[i] == '+'))
 	{
+		if (nptr[i] == '-')
+			sgn = -1;
 		i++;
 	}
-	number_len = i;
-	if (number_len > 0)
+	while (ft_isdigit(nptr[i]))
 	{
-		i = 0;
-		res = 0;
-		while (i < number_len)
-		{
-			j = 0;
-			tmp = nptr[i];
-			while (j < number_len - 1 - i)
-			{
-				tmp *= 10;
-				j++;
-			}
-			res += tmp;
-			i++;
-		}
-		return (res);
+		res = res * 10 + nptr[i] - '0';
+		i++;
 	}
-	return (0);
+	return (res * sgn);
 }
