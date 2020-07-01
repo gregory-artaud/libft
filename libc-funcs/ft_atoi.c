@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:59:55 by gregory           #+#    #+#             */
-/*   Updated: 2020/06/30 13:50:46 by gregory          ###   ########.fr       */
+/*   Updated: 2020/07/01 11:15:26 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sgn = 1;
 	res = 0;
-	while ((!ft_isdigit(nptr[i])) && (nptr[i] != '+') && (nptr[i] != '-'))
+	while ((nptr[i] == ' ') || (nptr[i] == '\n') || (nptr[i] == '\t')
+			|| (nptr[i] == '\r') || (nptr[i] == '\f') || (nptr[i] == '\v'))
 		i++;
 	if ((nptr[i] == '-') || (nptr[i] == '+'))
 	{
