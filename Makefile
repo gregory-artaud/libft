@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/06/29 11:36:05 by gregory          ###   ########.fr        #
+#    Updated: 2020/06/29 11:59:17 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ FILES	= ft_memset.c \
 						ft_strncmp.c \
 						ft_strlcpy.c \
 						ft_strlcat.c \
-						ft_strnstr.c
+						ft_strnstr.c \
+            ft_atoi.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
