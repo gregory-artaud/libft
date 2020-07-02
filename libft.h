@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/07/01 11:29:51 by gregory          ###   ########.fr       */
+/*   Updated: 2020/07/02 07:48:40 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <unistd.h>
 
+/*
+** Part one functions (libc functions)
+*/
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -39,5 +42,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
+/*
+** Part two functions (additional functions)
+*/
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
