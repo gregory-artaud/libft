@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gregory           #+#    #+#             */
-/*   Updated: 2020/07/02 07:48:40 by gregory          ###   ########.fr       */
+/*   Updated: 2020/07/02 07:58:21 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ char	*ft_strdup(const char *s);
 ** Part two functions (additional functions)
 */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 
 #endif
