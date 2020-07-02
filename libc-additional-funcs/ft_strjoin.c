@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 07:58:33 by gregory           #+#    #+#             */
-/*   Updated: 2020/07/02 08:04:06 by gregory          ###   ########.fr       */
+/*   Updated: 2020/07/02 08:05:18 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *concat;
-	size_t s1_len;
-	size_t s2_len;
-	unsigned int i;
+	char			*concat;
+	size_t			s1_len;
+	size_t			s2_len;
+	unsigned int	i;
 
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
