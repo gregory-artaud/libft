@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 16:39:41 by gregory           #+#    #+#             */
-/*   Updated: 2020/07/11 13:29:22 by gregory          ###   ########.fr       */
+/*   Updated: 2020/07/14 16:18:25 by gregory          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ char	**ft_splitalloc(char const *s, char c)
 	unsigned int	i;
 
 	i = 0;
-	flag = 0;
+	flag = 1;
 	word_count = 0;
-	while (s[i])
+	while (i <= ft_strlen(s))
 	{
-		if ((s[i] == c) && (!flag))
+		if ((i) && ((i == ft_strlen(s)) || (s[i] == c)) && (!flag))
 		{
 			word_count++;
 			flag = 1;
 		}
-		else
+		else if (s[i] != c)
 			flag = 0;
 		i++;
 	}
@@ -42,31 +42,30 @@ char	**ft_splitalloc(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char			**res;
-	unsigned int	word_start_index;
 	unsigned int	i;
 	unsigned int	j;
+	unsigned int	word_start_i;
 	int				flag;
 
 	res = ft_splitalloc(s, c);
-	word_start_index = 0;
-	j = 0;
 	i = 0;
-	while (s[i])
+	j = 0;
+	word_start_i = 0;
+	flag = 1;
+	while (i <= ft_strlen(s))
 	{
-		if ((s[i] == c) && (!flag))
+		if ((i) && ((i == ft_strlen(s)) || (s[i] == c)) && (!flag))
 		{
-			res[j] = malloc(sizeof(char) * (i - word_start_index + 2));
-			ft_memcpy(res[j], (s + word_start_index), (i - word_start_index + 1));
-			res[j][i - word_start_index + 1] = '\0';
+			res[j] = malloc(sizeof(char) * (i - word_start_i + 1));
+			ft_memcpy(res[j], (s + word_start_i), (i - word_start_i));
+			res[j][i - word_start_i] = '\0';
 			flag = 1;
+			j++;
 		}
-		else
+		else if ((s[i] != c) && (flag))
 		{
-			if (flag)
-			{
-				word_start_index = i;
-				flag = 0;
-			}
+			flag = 0;
+			word_start_i = i;
 		}
 		i++;
 	}
