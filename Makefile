@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/07/16 12:13:43 by gregory          ###   ########.fr        #
+#    Updated: 2020/07/16 12:19:15 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,8 @@ FILES	= ft_memset.c \
 						ft_strmapi.c \
 						ft_putchar_fd.c \
 						ft_putstr_fd.c \
-						ft_putendl_fd.c
+						ft_putendl_fd.c \
+						ft_putnbr_fd.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
