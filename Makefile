@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/07/01 11:29:33 by gregory          ###   ########.fr        #
+#    Updated: 2020/07/16 12:19:15 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,13 +37,26 @@ FILES	= ft_memset.c \
 						ft_strnstr.c \
             			ft_atoi.c \
 						ft_calloc.c \
-						ft_strdup.c
+						ft_strdup.c \
+						ft_substr.c \
+						ft_strjoin.c \
+						ft_strtrim.c \
+						ft_split.c \
+						ft_strndup.c \
+						ft_itoa.c \
+						ft_strmapi.c \
+						ft_putchar_fd.c \
+						ft_putstr_fd.c \
+						ft_putendl_fd.c \
+						ft_putnbr_fd.c
 OBJ 	= $(FILES:%.c=%.o)
 
 all: copy $(NAME)
 
 copy:
 	cp -f libc-funcs/*.c .
+	cp -f libc-additional-funcs/*.c .
+	cp -f personal-funcs/*.c .
 
 $(NAME): $(OBJ)
 	ar rcs $@ $(OBJ)
