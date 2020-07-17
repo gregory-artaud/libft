@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/07/16 12:19:15 by gregory          ###   ########.fr        #
+#    Updated: 2020/07/17 11:28:10 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,13 +49,16 @@ FILES	= ft_memset.c \
 						ft_putstr_fd.c \
 						ft_putendl_fd.c \
 						ft_putnbr_fd.c
-OBJ 	= $(FILES:%.c=%.o)
+BONUS_FILES = ft_lstnew.c
+OBJ 		= $(FILES:%.c=%.o)
+BONUS_OBJ	= $(BONUS_FILES:%.c=%.o)
 
 all: copy $(NAME)
 
 copy:
 	cp -f libc-funcs/*.c .
 	cp -f libc-additional-funcs/*.c .
+	cp -f bonus-funcs/*.c .
 	cp -f personal-funcs/*.c .
 
 $(NAME): $(OBJ)
@@ -63,6 +66,12 @@ $(NAME): $(OBJ)
 
 $(OBJ): $(FILES)
 	$(CC) $(CFLAGS) $(FILES)
+
+bonus: copy $(OBJ) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+
+$(BONUS_OBJ): $(BONUS_FILES)
+	$(CC) $(CFLAGS) $(BONUS_FILES)
 
 clean:
 	rm -f *.o
