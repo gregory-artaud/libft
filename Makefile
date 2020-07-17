@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/07/17 11:38:42 by gregory          ###   ########.fr        #
+#    Updated: 2020/07/17 11:51:34 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ FILES	= ft_memset.c \
 						ft_putendl_fd.c \
 						ft_putnbr_fd.c
 BONUS_FILES = 			ft_lstnew.c \
-						ft_lstadd_front.c
+						ft_lstadd_front.c \
+						ft_lstsize.c
 OBJ 		= $(FILES:%.c=%.o)
 BONUS_OBJ	= $(BONUS_FILES:%.c=%.o)
 
