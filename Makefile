@@ -6,7 +6,7 @@
 #    By: gregory <gregory@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/07/17 12:01:39 by gregory          ###   ########.fr        #
+#    Updated: 2020/07/18 11:27:33 by gregory          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,8 @@ BONUS_FILES = 			ft_lstnew.c \
 						ft_lstadd_front.c \
 						ft_lstsize.c \
 						ft_lstlast.c \
-						ft_lstadd_back.c
+						ft_lstadd_back.c \
+						ft_lstdelone.c
 OBJ 		= $(FILES:%.c=%.o)
 BONUS_OBJ	= $(BONUS_FILES:%.c=%.o)
 
