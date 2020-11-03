@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 20:23:19 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:01:04 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 17:43:28 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	unsigned int cpt;
+	unsigned int i;
 
-	cpt = 0;
-	while (s[cpt] != '\0')
-	{
-		cpt++;
-	}
-	return (cpt);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

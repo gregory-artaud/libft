@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:56:12 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:57 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 17:16:31 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned int cpt;
+	unsigned int	i;
+	char			*str;
 
-	cpt = 0;
-	while (cpt < n)
-	{
-		*(char *)(s + cpt) = (char)c;
-		cpt++;
-	}
+	str = (char *)s;
+	i = -1;
+	while (++i < n)
+		str[i] = (char)c;
 	return (s);
 }

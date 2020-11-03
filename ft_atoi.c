@@ -6,13 +6,18 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:59:55 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:35 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 21:40:08 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+static int	isdigit(int c)
+{
+	return ((c >= '0') && (c <= '9'));
+}
+
+int			ft_atoi(const char *nptr)
 {
 	unsigned int	i;
 	int				sgn;
@@ -30,10 +35,8 @@ int	ft_atoi(const char *nptr)
 			sgn = -1;
 		i++;
 	}
-	while (ft_isdigit(nptr[i]))
-	{
+	i--;
+	while (isdigit(nptr[++i]))
 		res = res * 10 + nptr[i] - '0';
-		i++;
-	}
 	return (res * sgn);
 }

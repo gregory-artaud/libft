@@ -6,21 +6,25 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 15:18:15 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:37 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 17:16:50 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+static void	*memset(void *s, int c, size_t n)
 {
-	unsigned int cpt;
+	unsigned int	i;
+	char			*str;
 
-	cpt = 0;
-	while (cpt < n)
-	{
-		*((char *)s + cpt) = '\0';
-		cpt++;
-	}
-	return ;
+	str = (char *)s;
+	i = -1;
+	while (++i < n)
+		str[i] = (char)c;
+	return (s);
+}
+
+void		ft_bzero(void *s, size_t n)
+{
+	memset(s, 0, n);
 }

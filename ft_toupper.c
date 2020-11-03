@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 22:51:33 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:01:11 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 21:22:41 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 int	ft_toupper(int c)
 {
 	if ((c >= 'a') && (c <= 'z'))
-	{
 		return (c + 'A' - 'a');
-	}
 	return (c);
 }

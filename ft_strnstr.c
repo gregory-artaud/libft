@@ -6,11 +6,21 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:36:49 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:01:08 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/03 21:35:51 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static size_t	strlen(const char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -19,8 +29,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t			llen;
 	size_t			blen;
 
-	llen = ft_strlen(little);
-	blen = ft_strlen(big);
+	llen = strlen(little);
+	blen = strlen(big);
 	if (llen == 0)
 		return ((char *)big);
 	i = 0;
