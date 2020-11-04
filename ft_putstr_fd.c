@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 12:04:35 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:59 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:58:09 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s));
+	int	i;
+	
+	i = -1;
+	while (s[++i])
+		write(fd, s + i, 1);
 	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 12:19:45 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:59 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 15:42:49 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,18 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *s;
+	char		c;
+	long int	n_cp;
 
-	s = ft_itoa(n);
-	ft_putstr_fd(s, fd);
+	n_cp = (long int)n;
+	if (n_cp < 0)
+	{
+		n_cp *= -1;
+		write(fd, "-", 1);
+	}
+	if (n_cp / 10)
+		ft_putnbr_fd(n_cp / 10, fd);
+	c = (n_cp % 10) + '0';
+	write(fd, &c, 1);
 	return ;
 }

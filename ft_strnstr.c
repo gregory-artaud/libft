@@ -6,13 +6,13 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:36:49 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 21:35:51 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:42:16 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	strlen(const char *s)
+static size_t	my_strlen(const char *s)
 {
 	unsigned int i;
 
@@ -29,8 +29,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t			llen;
 	size_t			blen;
 
-	llen = strlen(little);
-	blen = strlen(big);
+	llen = my_strlen(little);
+	blen = my_strlen(big);
 	if (llen == 0)
 		return ((char *)big);
 	i = 0;

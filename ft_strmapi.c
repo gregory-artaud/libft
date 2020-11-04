@@ -6,27 +6,33 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 11:44:29 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:01:04 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:55:50 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+static size_t	my_strlen(const char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char			*res;
 	unsigned int	i;
 
-	res = malloc(sizeof(char) * (ft_strlen(s) + 1));
-	if (res == NULL)
-		return (res);
-	i = 0;
-	while (s[i])
-	{
+	res = malloc(sizeof(char) * (my_strlen(s) + 1));
+	if (!res)
+		return (0);
+	i = -1;
+	while (s[++i])
 		res[i] = f(i, s[i]);
-		i++;
-	}
-	res[i] = '\0';
+	res[i] = 0;
 	return (res);
 }

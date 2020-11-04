@@ -6,14 +6,14 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 10:18:54 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:45 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:53:11 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <malloc.h>
 #include "libft.h"
 
-int		count_digits(int n)
+static int		count_digits(int n)
 {
 	unsigned int	i;
 
@@ -28,7 +28,7 @@ int		count_digits(int n)
 	return (i);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*res;
 	int		is_neg;
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	is_neg = (n < 0);
 	num_len = count_digits(n) + is_neg;
 	res = malloc(sizeof(char) * (num_len + 1));
-	res[num_len--] = '\0';
+	res[num_len--] = 0;
 	if (is_neg)
 		res[0] = '-';
 	while (num_len >= is_neg)

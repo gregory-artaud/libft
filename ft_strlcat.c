@@ -6,13 +6,13 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 10:47:31 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 21:34:46 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:42:18 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	strlen(const char *s)
+static size_t	my_strlen(const char *s)
 {
 	unsigned int i;
 
@@ -38,5 +38,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	if (i != size)
 		dst[i + j] = 0;
-	return (i + strlen(src));
+	return (i + my_strlen(src));
 }

@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 11:59:42 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:58 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 11:56:49 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, sizeof(char));
+	write(fd, &c, 1);
 	return ;
 }
