@@ -6,11 +6,10 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 11:40:16 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:48 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 16:26:51 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
@@ -22,7 +21,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (current)
 	{
 		next = current->next;
-		ft_lstdelone(current, del);
+		del(current->content);
+		free(current);
 		current = next;
 	}
 	*lst = NULL;

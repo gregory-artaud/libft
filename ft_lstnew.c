@@ -6,11 +6,10 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 11:17:18 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:52 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 15:46:18 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)

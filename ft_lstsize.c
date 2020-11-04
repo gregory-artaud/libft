@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/17 11:51:42 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 12:00:53 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 16:01:11 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ int	ft_lstsize(t_list *lst)
 		return (0);
 	current = lst;
 	i = 0;
-	while (current->next)
-	{
-		current = current->next;
+	while ((current = current->next))
 		i++;
-	}
 	return (i + 1);
 }
