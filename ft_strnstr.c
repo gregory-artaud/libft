@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:36:49 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 11:42:16 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 16:30:48 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	my_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char			*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	unsigned int	i;
 	unsigned int	j;

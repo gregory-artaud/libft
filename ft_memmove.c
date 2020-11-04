@@ -6,7 +6,7 @@
 /*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 16:10:16 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/03 17:34:37 by gregory          ###   ########lyon.fr   */
+/*   Updated: 2020/11/04 16:28:50 by gregory          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	*memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void		*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	tmp[n];
 
