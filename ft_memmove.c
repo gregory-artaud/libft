@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/28 16:10:16 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 16:28:50 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/06/28 16:10:16 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:04:58 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 

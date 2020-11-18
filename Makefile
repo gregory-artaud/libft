@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/06/28 13:46:16 by gregory           #+#    #+#              #
-#    Updated: 2020/11/03 11:55:24 by gregory          ###   ########lyon.fr    #
+#    Created: 2020/06/28 13:46:16 by gartaud           #+#    #+#              #
+#    Updated: 2020/11/18 17:03:00 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gregory <gregory@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/16 11:44:29 by gregory           #+#    #+#             */
-/*   Updated: 2020/11/04 11:55:50 by gregory          ###   ########lyon.fr   */
+/*   Created: 2020/07/16 11:44:29 by gartaud           #+#    #+#             */
+/*   Updated: 2020/11/18 17:04:05 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
