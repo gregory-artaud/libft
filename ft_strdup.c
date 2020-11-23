@@ -28,6 +28,8 @@ char			*ft_strdup(const char *s)
 	unsigned int	i;
 
 	new_string = malloc(sizeof(char) * (my_strlen(s) + 1));
+	if (!new_string)
+		return (0);
 	i = -1;
 	while (s[++i])
 		new_string[i] = s[i];

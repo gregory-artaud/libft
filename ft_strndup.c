@@ -17,6 +17,8 @@ char	*ft_strndup(char const *s, size_t n)
 	char *res;
 
 	res = malloc(sizeof(char) * n + 1);
+	if (!res)
+		return (0);
 	ft_memcpy(res, s, n);
 	res[n] = 0;
 	return (res);

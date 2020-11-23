@@ -16,6 +16,8 @@ static size_t	my_strlen(const char *s)
 {
 	unsigned int i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;
@@ -28,7 +30,9 @@ size_t			ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t			slen;
 
 	slen = my_strlen(src);
-	if (size != 0)
+	if (!dst || !src)
+		return (slen);
+	if (size > 0)
 	{
 		i = 0;
 		while ((i < size - 1) && (i < slen))

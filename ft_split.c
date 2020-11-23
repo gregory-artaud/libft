@@ -62,6 +62,8 @@ char			**ft_split(char const *s, char c)
 	unsigned int	j;
 	unsigned int	word_start_i;
 
+	if (!s)
+		return (0);
 	res = malloc(sizeof(char *) * ((ft_count_words(s, c) + 1)));
 	if (!res)
 		return (0);

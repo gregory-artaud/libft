@@ -12,14 +12,34 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static size_t	my_strlen(const char *s)
+{
+	unsigned int i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+char			*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substr;
+	unsigned int	slen;
+	unsigned int	sublen;
 	unsigned int	i;
 
-	substr = (char *)malloc(sizeof(char) * (len + 1));
+	if (!s)
+		return (0);
+	slen = my_strlen(s);
+	if (start >= slen)
+		start = slen;
+	sublen = (slen < len) ? slen : len;
+	substr = (char *)malloc(sizeof(char) * (sublen + 1));
+	if (!substr)
+		return (0);
 	i = -1;
-	while (++i < len)
+	while (++i < sublen)
 		substr[i] = s[i + start];
 	substr[i] = 0;
 	return (substr);

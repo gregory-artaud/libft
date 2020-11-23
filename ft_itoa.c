@@ -6,11 +6,10 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 10:18:54 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:06:18 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/11/23 11:17:44 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <malloc.h>
 #include "libft.h"
 
 static int		count_digits(int n)
@@ -38,6 +37,8 @@ char			*ft_itoa(int n)
 	is_neg = (n < 0);
 	num_len = count_digits(n) + is_neg;
 	res = malloc(sizeof(char) * (num_len + 1));
+	if (!res)
+		return (0);
 	res[num_len--] = 0;
 	if (is_neg)
 		res[0] = '-';

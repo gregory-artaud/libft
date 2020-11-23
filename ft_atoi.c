@@ -12,7 +12,13 @@
 
 #include "libft.h"
 
-static int	isdigit(int c)
+static int	my_isspace(char c)
+{
+	return ((c == ' ') || (c == '\n') || (c == '\t')
+			|| (c == '\r') || (c == '\f') || (c == '\v'));
+}
+
+static int	my_isdigit(int c)
 {
 	return ((c >= '0') && (c <= '9'));
 }
@@ -26,8 +32,7 @@ int			ft_atoi(const char *nptr)
 	i = 0;
 	sgn = 1;
 	res = 0;
-	while ((nptr[i] == ' ') || (nptr[i] == '\n') || (nptr[i] == '\t')
-			|| (nptr[i] == '\r') || (nptr[i] == '\f') || (nptr[i] == '\v'))
+	while (my_isspace(nptr[i]))
 		i++;
 	if ((nptr[i] == '-') || (nptr[i] == '+'))
 	{
@@ -35,8 +40,9 @@ int			ft_atoi(const char *nptr)
 			sgn = -1;
 		i++;
 	}
-	i--;
-	while (isdigit(nptr[++i]))
-		res = res * 10 + nptr[i] - '0';
+	while (nptr[i] && my_isdigit(nptr[i]))
+	{
+		res = res * 10 + nptr[i++] - '0';
+	}
 	return (res * sgn);
 }
