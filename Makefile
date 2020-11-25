@@ -11,6 +11,7 @@
 # **************************************************************************** #
 
 NAME		= libft.a
+SHARED		= libft.so
 CFLAGS		= -Wall -Werror -Wextra -c
 CC			= gcc
 DEPS		= libft.h
@@ -69,6 +70,10 @@ $(NAME): $(OBJ)
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $^
 
+so:
+	$(CC) -fPIC $(CFLAGS) $(FILES)
+	$(CC) -shared -o $(SHARED) $(OBJ)
+
 %.o: %.c $(DEPS)
 	$(CC) $(CFLAGS) $< -o $@
 
@@ -78,6 +83,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	rm -f $(SHARED)
 
 re: fclean all
 

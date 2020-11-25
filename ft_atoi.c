@@ -6,10 +6,11 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:59:55 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:06:56 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 13:39:38 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <limits.h>
 #include "libft.h"
 
 static int	my_isspace(char c)
@@ -23,26 +24,30 @@ static int	my_isdigit(int c)
 	return ((c >= '0') && (c <= '9'));
 }
 
-int			ft_atoi(const char *nptr)
+int			ft_atoi(const char *s)
 {
 	unsigned int	i;
 	int				sgn;
-	int				res;
+	long long		res;
 
 	i = 0;
 	sgn = 1;
 	res = 0;
-	while (my_isspace(nptr[i]))
+	while (my_isspace(s[i]))
 		i++;
-	if ((nptr[i] == '-') || (nptr[i] == '+'))
+	if ((s[i] == '-') || (s[i] == '+'))
 	{
-		if (nptr[i] == '-')
+		if (s[i] == '-')
 			sgn = -1;
 		i++;
 	}
-	while (nptr[i] && my_isdigit(nptr[i]))
+	while (s[i] && my_isdigit(s[i]))
 	{
-		res = res * 10 + nptr[i++] - '0';
+		res = res * 10 + s[i++] - '0';
+		if (res * sgn > INT_MAX)
+			return (-1);
+		else if (res * sgn < INT_MIN)
+			return (0);
 	}
 	return (res * sgn);
 }
