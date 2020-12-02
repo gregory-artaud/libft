@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/29 11:36:49 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:03:46 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2020/12/02 18:54:08 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ char			*ft_strnstr(const char *big, const char *little, size_t len)
 	unsigned int	i;
 	unsigned int	j;
 	size_t			llen;
-	size_t			blen;
 
+	if (!big)
+		return (0);
 	llen = my_strlen(little);
-	blen = my_strlen(big);
 	if (llen == 0)
 		return ((char *)big);
 	i = 0;
 	j = 0;
-	while ((i < len) && (i < blen))
+	while ((i < len) && big[i])
 	{
 		if (big[i] == little[j])
 			j++;
