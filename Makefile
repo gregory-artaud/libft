@@ -6,7 +6,7 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gartaud           #+#    #+#              #
-#    Updated: 2020/11/18 17:03:00 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2020/12/09 12:16:48 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,7 @@ BONUS_OBJ	= $(BONUS_FILES:%.c=%.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $@ $^
+	ar rcs $@ $?
 
 bonus: $(OBJ) $(BONUS_OBJ)
 	ar rcs $(NAME) $^
