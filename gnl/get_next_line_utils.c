@@ -6,24 +6,12 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:34:17 by gregory           #+#    #+#             */
-/*   Updated: 2021/01/14 13:01:44 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/14 13:11:17 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-/*
-int		ft_strlen(char *str)
-{
-	int		i;
 
-	if (!str)
-		return (0);
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-*/
 char	*ft_remainder(char *str)
 {
 	int		i;

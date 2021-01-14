@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/23 14:34:29 by gregory           #+#    #+#             */
-/*   Updated: 2021/01/14 13:04:37 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/14 13:11:03 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include "../libft.h"
 
 int		get_next_line(int fd, char **line);
-//int		ft_strlen(char *str);
 char	*ft_remainder(char *str);
 int		ft_is_in(char *str, char c);
 char	*ft_strcdup(char *str, char c);
