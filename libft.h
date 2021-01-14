@@ -6,7 +6,7 @@
 /*   By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/28 13:57:05 by gartaud           #+#    #+#             */
-/*   Updated: 2020/11/18 17:03:13 by gartaud          ###   ########lyon.fr   */
+/*   Updated: 2021/01/14 12:59:43 by gartaud          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include "gnl/get_next_line.h"
 
 typedef struct	s_list
 {

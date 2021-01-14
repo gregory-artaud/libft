@@ -6,15 +6,16 @@
 #    By: gartaud <gartaud@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/28 13:46:16 by gartaud           #+#    #+#              #
-#    Updated: 2020/12/09 12:16:48 by gartaud          ###   ########lyon.fr    #
+#    Updated: 2021/01/14 13:03:57 by gartaud          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libft.a
 SHARED		= libft.so
-CFLAGS		= -Wall -Werror -Wextra -c
+BUFFER_SIZE	= 256
+CFLAGS		= -Wall -Werror -Wextra
 CC			= gcc
-DEPS		= libft.h
+DEPS		= libft.h gnl/get_next_line.h
 FILES		=	ft_memset.c \
 				ft_memmove.c \
 				ft_memcpy.c \
@@ -49,8 +50,8 @@ FILES		=	ft_memset.c \
 				ft_putstr_fd.c \
 				ft_putendl_fd.c \
 				ft_putnbr_fd.c \
-				ft_strndup.c
-BONUS_FILES = ft_lstnew.c \
+				ft_strndup.c \
+				ft_lstnew.c \
 				ft_lstadd_front.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
@@ -58,28 +59,25 @@ BONUS_FILES = ft_lstnew.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
-				ft_lstmap.c
+				ft_lstmap.c \
+				gnl/get_next_line.c \
+				gnl/get_next_line_utils.c
 OBJ			= $(FILES:%.c=%.o)
-BONUS_OBJ	= $(BONUS_FILES:%.c=%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $@ $?
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar rcs $(NAME) $^
-
 so:
 	$(CC) -fPIC $(CFLAGS) $(FILES)
 	$(CC) -shared -o $(SHARED) $(OBJ)
 
 %.o: %.c $(DEPS)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) -D BUFFER_SIZE=$(BUFFER_SIZE) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
-	rm -f $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)
